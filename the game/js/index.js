@@ -371,7 +371,7 @@ function stageTooSmallHandler(){
     var score;
     var fontProperties = new Sakri.CanvasTextProperties(Sakri.CanvasTextProperties.BOLD, null, 100);
 
-    var word = "SAKRI";
+    var word = "lisai";
 
     function startDemo(){
         canvas.addEventListener('touchstart', handleUserTap, false);
@@ -976,17 +976,17 @@ function createCityGraphic(){
         gameState = -1;
     }
 
-    var maxCharacters = 8;
+    var maxCharacters = 12;
 
     function changeText(){
         var textInput = document.getElementById("textInput");
         if(textInput.value && textInput.text!=""){
             if(textInput.value.length > maxCharacters){
-                alert("Sorry, there is only room for "+maxCharacters+" characters. Try a shorter name.");
+                alert("字打多了，不要超过 "+maxCharacters+" 个.本天才只提醒一次.");
                 return;
             }
             if(textInput.value.indexOf(" ")>-1){
-                alert("Sorry, no support for spaces right now :(");
+                alert("请输入汉字或字母或数字 :(");
                 return;
             }
             word = textInput.value;
